@@ -6,6 +6,8 @@ I thrive both independently and collaboratively, always motivated to explore and
 
 ## Everything In My Mind I Write In Here
 
+![blog-home](https://github.com/aldiandarwin/personal-blog/assets/70283015/b9cb87bb-a970-4a06-b8fe-570c3a02701f)
+
 ### Table of Contents
 
 **Article**
