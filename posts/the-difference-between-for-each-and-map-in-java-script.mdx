@@ -1,0 +1,103 @@
+---
+title: The Difference Between ForEach and Map in JavaScript
+tags:
+    - javascript
+    - tips & tricks
+date: 2022-07-25
+excerpt: If you've been playing around with JavaScript lately, you might have come across two Array methods that seem to function the same.
+---
+
+If you've been playing around with JavaScript lately, you might have come across two Array methods that seem to function the same.
+
+### Array.prototype.forEach() - forEach
+
+According to [MDN](https://developer.mozilla.org/en-US/), The forEach() method will execute the provided function once for each element of the array.
+
+In short, use `forEach`, if you **do not want** to manipulate the original data, or the output of the array.
+
+Because basically, this method doesn't return anything, yep, it doesn't return anything, but it will just call the provided function on each element in the array that we have.
+
+Here is an example of its use.
+
+```js
+const users = [
+    { firstname: 'darwin', lastname: 'putra', age: 25 },
+    { firstname: 'Alex', lastname: 'Smith', age: 29 },
+    { firstname: 'john', lastname: 'doe', age: 26 },
+];
+
+users.forEach((user) => {
+    console.log(user.firstname);
+});
+
+// expected output: 'darwin'
+// expected output: 'Alex'
+// expected output: 'john'
+```
+
+### Array.prototype.map() - Map
+
+According to [MDN](https://developer.mozilla.org/en-US/), The map() method creates a new array filled with the results of the provided function call on each return element in the array.
+
+In short, use `map` if you **want** to change the data obtained from the array.
+
+Consider the following array.
+
+```js
+const users = [
+    { firstname: 'darwin', lastname: 'putra', age: 25 },
+    { firstname: 'Alex', lastname: 'Smith', age: 29 },
+    { firstname: 'john', lastname: 'doe', age: 26 },
+];
+```
+
+If you look at the array above, each of them has keys named `firstname` and `lastname`. What if we combine `firstname` and `lastname` into `name`.
+
+Take a look at the following example.
+
+```js
+users.map((user) => {
+    return {
+        name: `${user.firstname} ${user.lastname}`,
+        age: user.age,
+    };
+});
+
+/*
+ expected output: Array [
+  { name: 'darwin', age: 25 },
+  { name: 'Alex Smith', age: 29 },
+  { name: 'john doe', age: 26 }
+]
+*/
+```
+
+If we look, from the output, it is clear that they are different, `map` returns an array back, while `forEach` does not.
+
+Here is another example.
+
+```js
+const numbers = [2, 3, 4, 5];
+
+numbers.forEach((number) => {
+    console.log(number * 5);
+});
+
+// expected output: 10
+// expected output: 15
+// expected output: 20
+// expected output: 25
+```
+
+If we use map, then what is returned is data in the form of an array.
+
+```js
+const numbers = [2, 3, 4, 5];
+
+numbers.map((number) => number * 5);
+// expected output: Array [ 10, 15, 20, 25 ]
+```
+
+It's clear the difference between the two functions, **map** will return an array back, while **forEach** will not.
+
+Hopefully this article is useful, like if you like, share if you like sharing.

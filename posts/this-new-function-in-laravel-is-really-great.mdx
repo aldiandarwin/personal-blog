@@ -1,0 +1,37 @@
+---
+title: This New Function In Laravel Is Really Great
+tags:
+    - laravel
+    - tips & tricks
+date: 2022-06-24
+excerpt: Recently Tim MacDonald has contributed to creating a fake() function that can be used globally. With this function we can easily prototype, test, and generate data.
+---
+
+Recently [Tim MacDonald](https://github.com/timacdonald) has contributed to creating a `fake()` function that can be used globally. Using this function, we can easily prototype, test, and generate data.
+
+Here I will directly model it for users. Remember, there is no such thing as a table setup, let alone a factory.
+
+```html
+@for ($i = 0; $i < 10; $i++)
+<ul>
+    <li>Name: {{ fake()->name() }}</li>
+    <li>Email: {{ fake()->email() }}</li>
+    <li>Phone: {{ fake()->phoneNumber() }}</li>
+</ul>
+@endfor
+```
+
+Or for example "single record":
+
+```html
+<article>
+    <h1>{{ str(fake()->sentence())->title() }}</h1>
+    <div>
+        @foreach (fake()->paragraphs(12) as $item)
+        <p>{{ $item }}</p>
+        @endforeach
+    </div>
+</article>
+```
+
+Hopefully, this information will be useful.
