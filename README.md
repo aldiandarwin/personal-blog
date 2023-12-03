@@ -6,17 +6,17 @@ I thrive both independently and collaboratively, always motivated to explore and
 
 ## Everything In My Mind I Write In Here
 
-![blog-home](https://github.com/aldiandarwin/personal-blog/assets/70283015/b9cb87bb-a970-4a06-b8fe-570c3a02701f)
+![blog-home.png](https://github.com/aldiandarwin/personal-blog/assets/70283015/b9cb87bb-a970-4a06-b8fe-570c3a02701f)
 
 ### Table of Contents
 
-**Article**
+**_Article_**
 
-**About Me**
+**_About Me_**
 
-**Project**
+**_Project_**
 
-**My Gear**
+**_My Gear_**
 
 I am a web developer with a background in software engineering and Google UX. With 1 year of experience, I am well-versed in both front-end and back-end technologies. I'm proficient in English and Indonesian languages.
 
@@ -55,6 +55,8 @@ Feel free to reach out if you have any questions or collaboration opportunities.
 
 Looking forward to connecting with you!
 
+![blog-articles.png](https://github.com/aldiandarwin/personal-blog/assets/70283015/8c6f2866-efd8-4d96-a6af-a1400c3bc61c)
+
 ## Getting Started
 
 First, run the development server:
@@ -68,3 +70,5 @@ yarn dev
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+
+credit exclusive for <www.parsinta.com> who teach me a lot in coding skills , and template starter for better quality project 👏
